@@ -1,0 +1,66 @@
+git add
+git commit -m <msg>
+git log
+git log --online
+git status
+git init
+git commit --amend
+git switch <branch_name>
+git switch -c (create a new branch and move into it)
+git checkout -b (create a new branch and move into it)
+git branch (to list all the branches)
+git branch <branch_name>
+git merge <branch_name>
+git log --oneline
+git diff HEAD (all diff between HEAD and unstaged/staged changes)
+git diff (diff between working directory (unstaged) and staging area (staged))
+git diff --staged (diff between last commit and staging area)
+git diff --cached (diff between last commit and staging area)
+git diff --staged / --cached / HEAD <file_name> (diff for only file_name)
+git diff <branch1_name> <branch2_name> (diff between 2 branches)
+git diff <commit1_name> <commit2_name> (order matters)
+git stash - stash away all the staged and unstaged changes without committing them and before switching to a new branch
+git stash save - same as "git stash"
+git stash pop - remove the said changes from stash and into the working directory and staging area to resume work
+git stash apply - apply the stashed changes to a different branch (like merge but without committing)
+git stash list - lists down all the stashes last one first
+you can stash multiple time on the same stash
+git stash apply stash@{2} - if you want to apply stash per the list and in the middle of the list (like 2 here out of 4 stashes)
+git stash drop stash@{2} - if you want to drop a stash
+git stash clear - if you want to completely clear the stash list
+git checkout <branch_name> - switches to the branch <branch_name>
+git checkout <commit_hash> - switches to the commit with <commit_hash>
+git checkout HEAD~<number> - switches to the commit which is <number> behind HEAD
+git checkout HEAD <filenames> - discard all the uncommitted changes in <filenames>
+git checkout -- <filenames> -  same as before
+git restore <filename> - restore the file contents to include only the most recent commit (where HEAD resides)
+git restore --source HEAD~<number> <filename> - same but you restore to something even earlier
+git restore --staged <filename> - unstage a file
+git reset <commit-hash> - removes all the commits after the commit-hash but the changes made in the working directory remain
+                          one use case is switch to different branch commit the working directory chnages in the new branch
+git reset --hard <commit-hash> - remove everything after that commit-hash including working directory's changes
+git reset removes the history and moves the HEAD to an earlier commit by deleting the working directory changes or not.
+git reset - resets the history to an older commit and those history are gone completely
+git revert <commit-hash> - undoes a commit from the commit-hash and creates a new commit with those changes made
+git revert is preferred over git reset while collaborating, since git reset deletes the history but git revert retains it
+git clone <url> - clone a repository
+git remote add <remote_name> <remote_url> - add a new remote with URL
+git remote - list all the remotes
+git remote -v - list all the remotes verbosely
+git push <remote_name> <branch_name> - push the branch to remote
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
